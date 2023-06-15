@@ -1,0 +1,94 @@
+package GenproTvm;
+
+import java.io.FileNotFoundException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class selenium {
+	public static void main(String[] args) throws FileNotFoundException, InterruptedException {
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\saranya\\Downloads\\chromedriver_win32 (3)\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get( "https://www.saucedemo.com/");
+		
+				WebElement username=driver.findElement(By.id("user-name"));
+				username.sendKeys("standard_user");
+				WebElement Password=driver.findElement(By.id("password"));
+				Password.sendKeys("secret_sauce");
+				WebElement login=driver.findElement(By.id("login-button"));
+				login.click();
+				Thread.sleep(1000);
+				Select lowhigh=new Select(driver.findElement(By.xpath("/html/body/div/div/div/div[1]/div[2]/div/span/select")));
+				lowhigh.selectByIndex(2);
+				Thread.sleep(1000);
+			    WebElement SLoneside=driver.findElement(By.id("add-to-cart-sauce-labs-onesie"));
+			    SLoneside.click();
+				Thread.sleep(1000);
+				WebElement SLBikelight=driver.findElement(By.id("add-to-cart-sauce-labs-bike-light"));
+				SLBikelight.click();
+			    Thread.sleep(1000);
+			    WebElement SLBolttshirt=driver.findElement(By.id("add-to-cart-sauce-labs-bolt-t-shirt"));
+		        SLBolttshirt.click();
+		        Thread.sleep(1000);
+			    WebElement SLT=driver.findElement(By.id("add-to-cart-test.allthethings()-t-shirt-(red)"));
+		        SLT.click();
+			    Thread.sleep(1000);
+			    WebElement Backpack=driver.findElement(By.id("add-to-cart-sauce-labs-backpack"));
+		        Backpack.click();
+		        Thread.sleep(1000);
+			    WebElement FleezeJac=driver.findElement(By.id("add-to-cart-sauce-labs-fleece-jacket"));
+			    FleezeJac.click();
+			    Thread.sleep(1000);
+		        WebElement Addtocart=driver.findElement(By.xpath("/html/body/div/div/div/div[1]/div[1]/div[3]/a"));
+		        Addtocart.click();
+		        Thread.sleep(1000);
+		     
+			    WebElement Removeonsie=driver.findElement(By.id("remove-sauce-labs-onesie"));
+			    Removeonsie.click();
+			    Thread.sleep(1000);
+			    WebElement Removebikelight=driver.findElement(By.id("remove-sauce-labs-bike-light"));
+		       Removebikelight.click();
+		       Thread.sleep(1000);
+		       
+			    WebElement checkout=driver.findElement(By.id("checkout"));
+			    checkout.click();
+		        Thread.sleep(1000);
+		        
+		        WebElement Firstname=driver.findElement(By.id("first-name"));
+			    Firstname.sendKeys("Raju");
+		        Thread.sleep(1000);
+		       WebElement Lastname=driver.findElement(By.id("last-name"));
+		      Lastname.sendKeys("Ayyappan");
+		       Thread.sleep(1000);
+		       WebElement Postalcode=driver.findElement(By.id("postal-code"));
+			  Postalcode.sendKeys("629002");
+		     Thread.sleep(1000);
+		     WebElement Continue=driver.findElement(By.id("continue"));
+		    Continue.click();
+		     Thread.sleep(1000);
+		      WebElement finish=driver.findElement(By.id("finish"));
+		  	finish.click();
+		    Thread.sleep(1000);
+		     WebElement BacktoHome=driver.findElement(By.name("back-to-products"));
+		    BacktoHome.click();
+		    Thread.sleep(1000);
+		    WebElement button=driver.findElement(By.id("react-burger-menu-btn"));
+		  	button.click();
+		    Thread.sleep(1000);
+		    
+		    WebElement logout=driver.findElement(By.id("logout_sidebar_link"));
+		  	logout.click();
+		    Thread.sleep(1000);
+		    driver.close();
+		   
+		   
+				
+				
+
+		}
+
+
+}
